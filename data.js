@@ -10,13 +10,12 @@ moment.locale('de')
 class Data {
 	getDataSensors () {
 		return new Promise(async (fulfill, reject) => {		
-			fulfill({ 'general': this.getDataGeneral(),
-						'dht': await this.getDataDht() });
+			fulfill({ 'dht': await this.getDataDht() });
 		})
 	}
 	
 	getDataGeneral() {
-		return { 'lastupdate': moment().format('LLL') }
+		return { 'now': moment() }
 	}
 	
 	getDataDht() {

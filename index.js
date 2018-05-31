@@ -18,6 +18,10 @@ app.get('/simple', async function (req, res) {
 	res.sendFile(__dirname + '/views/simple.html');
 });
 
+app.get('/api/general', async function (req, res) {
+	res.json(await data.getDataGeneral());
+});
+
 app.get('/api/sensors', async function (req, res) {
 	res.json(await data.getDataSensors());
 });

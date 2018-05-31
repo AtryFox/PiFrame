@@ -12,31 +12,43 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
 	<link rel="stylesheet" href="/css/main.css">
-	
-	<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
 </head>
 
 <body id="body">
 	<div id="data-footer">
+		
 		<div class="row">
 			<div class="col-8 align-self-end">
-				<div class="row">
-					<div class="col-4">
-						<h2><i class="fa fa-thermometer-full fa-fw"></i> Indoor Temp</h2>
-						<h1><span id="dht-temperature"></span>°C</h1>
-						<h3><span id="dht-humidity"></span>% Humidity</h3>
-					</div>
-					<div class="col-4">
-						<h2><i class="fa fa-thermometer-full fa-fw"></i> Outdoor Temp <small><span id="owm-city"></span></small></h2>
-						<h1><span id="owm-temperature"></span>°C</h1>
-						<h3><span id="owm-humidity"></span>% Humidity</h3>
-					</div>
+				<div class="float-left">
+					<h2><i class="fa fa-thermometer-full fa-fw"></i> Indoor Temp</h2>
+					<h1><span id="dht-temperature"></span>°C</h1>
+					<h3><span id="dht-humidity"></span>% Humidity</h3>
+				</div>
+				<div class="float-left px-5">
+					<h2><i class="fa fa-thermometer-full fa-fw"></i> Outdoor Temp <small><span id="owm-city"></span></small></h2>
+					<h1><span id="owm-temperature"></span>°C</h1>
+					<h3><span id="owm-humidity"></span>% Humidity</h3>
 				</div>
 			</div>
 			
 			<div class="col-4 align-self-end text-right">
-				<h1>16:50</h1>
-				<h3>25. Mai 2018</h3>
+				<div class="float-right">
+					<h1><span id="general-time"></span></h1>
+					<h3><span id="general-date"></span></h3>
+				</div>
+			</div>
+		</div>
+		<hr/>
+		<div class="row">
+			<div class="col-8 align-self-end">
+				<div class="float-left">
+				</div>
+			</div>
+			
+			<div class="col-4 align-self-end text-right">
+				<div class="float-right">
+					<h4>Picture: <span id="wallpaper-title"></span></h4>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -47,6 +59,8 @@
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-	<script src="/js/data.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.1/moment-with-locales.min.js" integrity="sha256-ZykW30UBCXWkPGsVyVPdJlUrce9/PawgYCEzinA4pnU=" crossorigin="anonymous"></script>
+	<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
+	<script defer src="/js/data.js"></script>
 </body>
 </html>
