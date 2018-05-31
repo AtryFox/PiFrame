@@ -20,7 +20,7 @@ class Data {
 	
 	getDataDht() {
 		return new Promise((fulfill, reject) => {
-			sensorDht.read(11, 4, function(err, temperature, humidity) {
+			sensorDht.read(config.sensor.dht.type, config.sensor.dht.gpio, function(err, temperature, humidity) {
 				if (!err) {
 					fulfill({'temp' : temperature, 'humidity': humidity});
 				}
