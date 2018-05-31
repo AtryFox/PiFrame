@@ -39,7 +39,7 @@ async function refreshData() {
 				lastBgUpdate = now;
 				$('#wallpaper-lastupdate').html(lastBgUpdate);
 				$('#wallpaper-url').html(res.url);
-				$('#wallpaper-title').html(res.title) + ' - ';
+				$('#wallpaper-title').html(res.title);
 				$('#wallpaper-author').html(res.author);
 				
 				$('#background').prepend(`<div style="background-image: url('${res.url}')"></div>`)

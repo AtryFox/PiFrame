@@ -19,7 +19,7 @@ const config = {
 			'key': ''
 		},
 		'openweathermap': {
-			// Get your free API key at https://openweathermap.org/
+			// Get your free API key at https://openweathermap.org/appid
 			// Get your city ID at http://openweathermap.org/help/city_list.txt
 			'key': '',
 			'cityid': ''
