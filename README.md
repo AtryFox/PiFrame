@@ -27,7 +27,7 @@ chmod +x ./run.sh
 ```
 
 
-## Configuring##
+## Configuring ##
 Copy `/config/default-config.js` to `/config/config.js`.
 
 ### Properties ###
