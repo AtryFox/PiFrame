@@ -1,11 +1,11 @@
 {
   "name": "piframe",
   "version": "1.0.0",
-  "description": "Google Chromecast-like picture frame displaying data of different sensors.	",
+  "description": "Google Chromecast-like picture frame displaying data of different sensors.",
   "main": "index.js",
   "author": "DerAtrox",
   "license": "MIT",
-  "repositories": [
+  "repository": [
     {
       "type": "git",
       "url": "https://github.com/DerAtrox/PiFrame.git"
