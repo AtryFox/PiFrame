@@ -9,13 +9,13 @@ Tested on Raspberry Pi 2 Model B, but it should run on any hardware with the Bro
 <img src="https://raw.githubusercontent.com/DerAtrox/PiFrame/76f606a121f7226ca79951fa8f2dd94e533a014a/preview.png">
 
 
-##Requirements##
+## Requirements ##
 - Node.js 8 or higher
 - Node.js module [PM2](http://pm2.keymetrics.io/)
 - [BCM2835](http://www.airspayce.com/mikem/bcm2835/) library
 
 
-##Preparing##
+## Preparing ##
 Clone this repository on your Pi:
 ```bash
 git clone https://github.com/DerAtrox/PiFrame.git
@@ -27,10 +27,10 @@ chmod +x ./run.sh
 ```
 
 
-##Configuring##
+## Configuring##
 Copy `/config/default-config.js` to `/config/config.js`.
 
-###Properties###
+### Properties ###
 |Property                   |Default    |Description
 |---------------------------|-----------|------------------------------------
 |port                       |3000       |Port used by the web server
@@ -42,7 +42,7 @@ Copy `/config/default-config.js` to `/config/config.js`.
 |api.openweathermap.cityid  |*empty*    |City ID of the city you want to display ([City ID list](http://openweathermap.org/help/city_list.txt))
 
 
-##Running and updating
+## Running and updating ##
 
 Run `run.sh` to start and daemonize PiFrame with PM2.
 ```bash
@@ -58,13 +58,13 @@ To update PiFrame, just run the start script (`run.sh`) again.
 **Note**: Running the start script will reset everything in the directory, except Node.js modules and configuration files, to the last commit in this repository#master.
 
 
-##Views and API##
-###Views##
+## Views and API ##
+### Views ###
 PiFrame comes with two views, one fancy view you can reach with `/` and one debugging view just showing some information, which you can reach with `/simple`.
 
 More views or themes are planned in the future.
 
-###API###
+### API ###
 PiFrame uses a API to refresh the information shown on your screen every few seconds. You can use these API endpoints for other projects if you want.
 
 At the moment, there are the following API **GET** endpoints:
@@ -74,7 +74,7 @@ At the moment, there are the following API **GET** endpoints:
 - `/api/background`
 
 
-##Libraries, Frameworks, Fonts and APIs##
+## Libraries, Frameworks, Fonts and APIs ##
 This project is made possible by these awesome libraries, frameworks, fonts and APIs, go check them out!
 
 - [Node.js](https://nodejs.org/) - Node.js JavaScript runtime
