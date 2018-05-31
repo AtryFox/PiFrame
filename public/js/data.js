@@ -30,14 +30,26 @@ async function refreshData() {
 		})
 	];
 			
-	if(now - lastBgUpdate >= 1000 * 60 * 2) {
-		promises.push($.get('/api/background', (res) => {
-			lastBgUpdate = now;
-			$('#wallpaper-lastupdate').html(lastBgUpdate);
-			$('#wallpaper-url').html(res.hdurl);
-			$('#wallpaper-title').html(res.title);
+	if(now - lastBgUpdate >= 1000 * 60 * 5) {
+		promises.push($.get('/api/background', (res) => {			
+			let img = new Image() 
+			img.src = res.url;
 			
-			$('#body').css('background-image', `url("${res.hdurl}")`);
+			img.onload = () => {
+				lastBgUpdate = now;
+				$('#wallpaper-lastupdate').html(lastBgUpdate);
+				$('#wallpaper-url').html(res.url);
+				$('#wallpaper-title').html(res.title) + ' - ';
+				$('#wallpaper-author').html(res.author);
+				
+				$('#background').prepend(`<div style="background-image: url('${res.url}')"></div>`)
+				
+				if($('#background').children().length > 1) {
+					$('#background > div:not(:first-child)').each((index, obj) => {
+						$(obj).fadeOut(2500, () => { $(obj).remove() });
+					});
+				}
+			}
 		}));
 	}
 	

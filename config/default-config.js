@@ -13,6 +13,11 @@ const config = {
 			// Get your free API key at https://api.nasa.gov/
 			'key': ''
 		},
+		'unsplash': {
+			// Get your free API key at https://unsplash.com/developers
+			// A demo app should be enough for this (50 requests per hour)
+			'key': ''
+		},
 		'openweathermap': {
 			// Get your free API key at https://openweathermap.org/
 			// Get your city ID at http://openweathermap.org/help/city_list.txt
