@@ -8,7 +8,7 @@ moment.locale('de')
 
 
 class Data {
-	getDataAll () {
+	getDataSensors () {
 		return new Promise(async (fulfill, reject) => {		
 			fulfill({ 'general': this.getDataGeneral(),
 						'dht': await this.getDataDht() });
@@ -29,12 +29,21 @@ class Data {
 		})
 	}
 	
-	getNewBackground() {
+	getDataBackground() {
 		return new Promise(async (fulfill, reject) => {
 			let res = await axios.get(`https://api.nasa.gov/planetary/apod?api_key=${config.api.nasa.key}`);
 							
 
-			fulfill({'url': res.data.hdurl});			
+			fulfill(res.data);			
+		});
+	}
+	
+	getDataWeather() {
+		return new Promise(async (fulfill, reject) => {
+			let res = await axios.get(`https://api.openweathermap.org/data/2.5/weather?id=${config.api.openweathermap.cityid}&units=metric&appid=${config.api.openweathermap.key}`);
+							
+
+			fulfill(res.data);			
 		});
 	}
 }

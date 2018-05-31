@@ -18,12 +18,16 @@ app.get('/simple', async function (req, res) {
 	res.sendFile(__dirname + '/views/simple.html');
 });
 
-app.get('/data', async function (req, res) {
-	res.json(await data.getDataAll());
+app.get('/api/sensors', async function (req, res) {
+	res.json(await data.getDataSensors());
 });
 
-app.get('/background', async function (req, res) {
-	res.json(await data.getNewBackground());
+app.get('/api/background', async function (req, res) {
+	res.json(await data.getDataBackground());
+});
+
+app.get('/api/weather', async function (req, res) {
+	res.json(await data.getDataWeather());
 });
 
 app.use(express.static('public'))
