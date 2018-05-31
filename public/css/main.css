@@ -1,0 +1,52 @@
+#body {
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center center;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+
+	font-family: 'Roboto', sans-serif;
+	font-weight: 700
+}
+
+#data-footer {
+	position: fixed;
+	bottom: 0;
+	padding: 4% 6%;
+	width: 100%;
+	opacity: 0.8;
+	color: white;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,0.86+100 */
+	background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.86) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.86) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.86) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#db000000',GradientType=0 ); /* IE6-9 */
+}
+
+h1 {
+	font-size: 5rem;
+}
+
+h2 {
+	font-weight: 700;
+}
+
+h3 {
+	font-size: 1.5rem;
+}
+
+/*.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+	margin-bottom: 0;
+	line-height: 1.1
+}*/
+
+/*#data-footer > div{
+    position: relative;
+}
+
+#data-footer > div > span {
+   position: absolute;
+   bottom: 0;
+}*/
