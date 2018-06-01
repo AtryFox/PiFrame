@@ -1,7 +1,7 @@
 PiFrame
 =======
 
-Google Chromecast-like picture frame displaying data from different sensors.
+Google Chromecast-like picture frame displaying data from different sensors and APIs.
 
 Tested on Raspberry Pi 2 Model B, but it should run on any hardware with the Broadcom BCM 2835 chip for GPIO communication.
 
