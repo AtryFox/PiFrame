@@ -37,5 +37,5 @@ app.get('/api/weather', async function (req, res) {
 app.use(express.static('public'))
 
 app.listen(config.port, function () {
-  console.log('PiFrame listening on port 3000!');
+	console.log(`PiFrame listening on port ${config.port}!`);
 });
